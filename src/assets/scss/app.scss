@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import 'settings';
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Image path in css: ./img/name.ext */
+body {
+  font-family: Lato;
+  color: $secondary;
+  background: $primary;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  header.title {
+    display: flex;
+    flex-direction: row-reverse;
+    border: .25rem solid cornflowerblue;
+    border-bottom: 0;
+    justify-content: center;
+    width: 40%;
+    h1 {
+      padding: 1rem 2rem;
+      font-size: 5rem;
+    }
+    img {
+      height: 5rem;
+      align-self: center;
+    }
+  }
+  .content {
+    border: .25rem solid cornflowerblue;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-align: justify;
+    width: 40%;
+    
+    p {
+      padding: 0 1rem 2rem 1rem;
+
+      &:before {
+        content: "";
+        background-image: $avatar;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: block;
+        margin: 2rem auto;
+        height: 100px;
+      }
+    }
+  }
+}
